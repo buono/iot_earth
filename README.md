@@ -7,6 +7,7 @@ Interface 2021年7月号 IOT地球儀
 メインファイル
 
 ■js
+
 -connect.js
 画像選択
 
@@ -20,6 +21,7 @@ Interface 2021年7月号 IOT地球儀
 リアルタイムグラフ用
 
 ■css
+
 -style.css
 メインファイル用
 
