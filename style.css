@@ -1,0 +1,42 @@
+/*画像をスムーズに切り替える*/
+#parent1 {
+  position: relative;
+}
+#parent1 img {
+  /*transition: all 500ms 0s ease; */
+  position: absolute; top: 0; left: 0;
+}
+#parent2{
+  position: relative;
+}
+#parent2 img {
+  /*transition: all 500ms 0s ease; */
+  position: absolute; top: 0px; left: 540px;
+}
+#parent3 {
+  position: relative;
+}
+#parent3 img {
+  /*transition: all 500ms 0s ease; */
+  position: absolute; top: 0px; left: 1080px;
+}
+.on {
+  opacity: 1;
+}
+.off {
+  opacity: 0;
+}
+
+/*Epoch.js用*/
+.epoch .category1 .line {
+ stroke: #dc3545;
+}
+
+.epoch .category2 .line {
+ stroke: #17a2b8;
+}
+
+/* footer用 */
+.footer {
+  position: absolute; top: 1030px; left: 10px;
+}

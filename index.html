@@ -1,0 +1,110 @@
+<!doctype html>
+<!--
+Copyright 2017-2020 JellyWare Inc. All Rights Reserved.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="BlueJelly">
+    <meta name="viewport" content="width=640, maximum-scale=1.0, user-scalable=yes">
+    <title>BlueJelly</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/epoch-charting@0.8.4/tests/render/css/tests.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/epoch-charting@0.8.4/dist/css/epoch.min.css">
+  </head>
+
+<body>
+    <div class="title margin">
+        <h2 id="title">IOT地球儀</h2>
+        <h4>made by Buono</h4>
+    </div>
+
+<button id="startNotifications" class="button">Start Notify</button>
+<button id="stopNotifications" class="button">Stop Notify</button>
+<button id="calibration" class="button">Calibration</button>
+<hr>
+<div id="gmt"></div>
+
+<!--国とカテゴリーを選択-->
+<label for="country">国：</label>
+<select id="select_country" name="country">
+<option value="JP" selected>日本</option>
+<option value="US">アメリカ</option>
+<option value="BR">ブラジル</option>
+<option value="AU">オーストラリア</option>
+<option value="CH">スイス</option>
+</select>
+</p>
+<p>
+<label for="category">カテゴリ：</label>
+<select id="select_category" name="category">
+<option value="beach" selected>ビーチ</option>
+<option value="city">都市</option>
+<option value="mountain">山</option>
+<option value="forest">森</option>
+<option value="traffic">交通</option>
+</select>
+
+<!--開発画面用-->
+<div class="contents margin">
+    <hr>
+    <div>デバイス名：<span id="device_name"> </span></div>
+    <div>UUID：<span id="uuid_name"> </span></div>
+    <div>データ：<span id="data_text"> </span></div>
+    <div>ステータス：<span id="status"> </span></div>
+    <hr>
+<!--開発画面用-->
+
+
+<!--時間表示用-->
+<div>画像1 GMT時間：<span id="gmt_time1"></span></div>
+<div>画像1 現地時間：<span id="local_time1"></span></div>
+<div>画像2 GMT時間：<span id="gmt_time2"></span></div>
+<div>画像2 現地時間：<span id="local_time2"></span></div>
+<div>画像3 GMT時間：<span id="gmt_time3"></span></div>
+<div>画像3 現地時間：<span id="local_time3"></span></div>
+
+    <hr>
+
+<!--Epoch.js用-->
+<div class="container">
+    <div class="row">
+        <div id="myChart" class="epoch" style="width: 100%; height: 200px">
+        </div>
+    </div>
+</div>
+<!-- Epoch.js用ここまで-->
+
+<div class="container">
+
+    <div class="contents margin">
+        <div id="parent1"></div>
+        <div id="parent2"></div>
+        <div id="parent3"></div>
+    </div>
+
+</div>
+
+<div class="footer margin">
+            For more information, see <a href="https://jellyware.jp/kurage" target="_blank">jellyware.jp</a> and <a href="https://github.com/electricbaka/bluejelly" target="_blank">GitHub</a> !
+</div>
+
+
+<script type="text/javascript" src="js/bluejelly.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/ja.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.13/d3.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/js/epoch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/epoch-charting@0.8.4/dist/js/epoch.min.js"></script>
+<script src="js/fetch_camera.js"></script>
+<script src="js/epoch.js"></script>
+<script src="js/connect.js"></script>
+
+</body>
+</html>
+
