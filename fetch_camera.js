@@ -43,7 +43,7 @@ function fetch_urls(){
     "url": "https://webcamstravel.p.rapidapi.com/webcams/list/orderby=random/ country="+select_country+"/category="+select_category+"?lang=en&show=webcams%3Aimage%2Clocation%2Cplayer",
     "method": "GET",
     "headers": {
-      "x-rapidapi-key": "f958841b06msh72714995df69adbp17b314jsn10c684f161af",
+      "x-rapidapi-key": "YOUR-API-KEY",
       "x-rapidapi-host": "webcamstravel.p.rapidapi.com"
     }
   };
