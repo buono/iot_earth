@@ -4,19 +4,25 @@ Interface 2021年7月号 IOT地球儀
 
 【ファイル一覧】
 -index.html
+メインファイル
 
--css/style.css
+■js
+-connect.js
+画像選択
 
--css/epoch.css
+-fetch_camera.js
+画像取得
 
+-BlueJelly.js
+ブラウザでBLE通信できるライブラリ
 
--js/connect.js
+-epoch.js
+リアルタイムグラフ用
 
+■css
+-style.css
+メインファイル用
 
--js/fetch_camera.js
+-epoch.css
+リアルタイムグラフ用
 
-
--js/BlueJelly.js
-
-
--js/epoch.js
