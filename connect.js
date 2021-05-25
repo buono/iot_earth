@@ -48,12 +48,20 @@ function calibration() {
 //Read後の処理：得られたデータの表示など行う
 //--------------------------------------------------
 var value_global = 0;
+var values = [];
 
 ble.onRead = function (data, uuid){
   //フォーマットに従って値を取得
   var value = data.getUint16(0); //0〜360度の角度データが入っている
   value = 360 - value; //回転角度が地球の向きに対して逆のため
   value_global = value;
+  
+  //ばらつきが大きいので、値を平均化する３
+  values[0] = values[1];
+  values[1] = values[2];
+  values[2] = value;
+  value = (values[0] + values[1] + values[2]) / 3;
+
 
   //HTMLにデータを表示
     document.getElementById('data_text').innerHTML = value;
